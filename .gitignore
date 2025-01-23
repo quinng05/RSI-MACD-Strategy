@@ -1,0 +1,16 @@
+# Ignore virtual environment
+.venv/
+venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Ignore PyCharm files
+.idea/
