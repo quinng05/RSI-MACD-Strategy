@@ -18,6 +18,9 @@ def add_indicators(data):
     data["macd_signal"] = macd_signal
     data["macd_hist"] = macd_hist
 
+    # RSI Calculation (Default 14-period)
+    data["RSI"] = talib.RSI(data["Close"], timeperiod=14)
+
     # Drop rows where MACD values are NaN (first 26 bars might be NaN)
     data.dropna(subset=["macd", "macd_signal", "macd_hist"], inplace=True)
 
